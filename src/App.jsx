@@ -1,9 +1,11 @@
-import React from "react";
-import {BiUser} from "react-icons/bi"
+import React, {useState} from "react";
+import { BiUser } from "react-icons/bi";
 import { TbMushroom } from "react-icons/tb";
-
+import DropDownItem from "./components/DropDownItem";
 
 function App() {
+  const [show, toggleShow] = useState(false);
+
   return (
     <div className="bg-[#130114] h-screen">
       <div className="flex flex-col p-6">
@@ -14,16 +16,42 @@ function App() {
               {/* logo */}
               <div className="flex">
                 <div>
-                  <TbMushroom  />
+                  <TbMushroom />
                 </div>
                 <h4 className="text-[16px] lowercase tracking-tight font-thin">
-                  cogumelo<span className="text-[18px] uppercase tracking-wider font-normal">TRINDADE</span>{" "}
+                  cogumelo
+                  <span className="text-[18px] uppercase tracking-wider font-normal">
+                    TRINDADE
+                  </span>{" "}
                 </h4>
               </div>
               {/* user-icon */}
-              <div className="flex justify-end">
+              <div
+                className="flex justify-end"
+                onClick={() => toggleShow(!show)}
+              >
                 <BiUser />
+                {show && "bg-teal-400"}
               </div>
+              {/* Dropdown Menu */}
+              {show && (
+                <div className="bg-white w-[200px] rounded-md p-4 top-[100px]">
+                  <h3 className="text-lg font-bold text-purple-600">
+                    Mr. Kills
+                  </h3>
+                  <h3 className="text-gray-500 border-b-[2px] border-b-gray-300">
+                    Front-end Developer
+                  </h3>
+                  <ul className="">
+                    <DropDownItem image={BiUser} text="My Profile" />
+                    <DropDownItem image={BiUser} text="Inbox" />
+                    <DropDownItem image={BiUser} text="Settings" />
+                    <DropDownItem image={BiUser} text="Edit Profile" />
+                    <DropDownItem image={BiUser} text="Help" />
+                    <DropDownItem image={BiUser} text="Logout" />
+                  </ul>
+                </div>
+              )}
             </div>
             <div>
               <p className="flex justify-center my-5">Mushrooms</p>
@@ -55,3 +83,5 @@ function App() {
 }
 
 export default App;
+
+
