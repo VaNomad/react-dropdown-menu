@@ -4,9 +4,11 @@ export default function DropDownItem(props) {
   console.log(props);
 
   return (
-    <li>
+    <li className="text-lg mt-4">
       <img src={props.image} alt="" />
-      <a href="">{props.text}</a>
+      <a href="" className="">
+        {props.text}
+      </a>
     </li>
   );
 }

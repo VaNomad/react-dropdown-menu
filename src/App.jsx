@@ -27,22 +27,21 @@ function App() {
               </div>
               {/* user-icon */}
               <div
-                className="flex justify-end"
+                className="flex justify-end cursor-pointer focus:bg-teal-600"
                 onClick={() => toggleShow(!show)}
               >
                 <BiUser />
-                {show && "bg-teal-400"}
               </div>
               {/* Dropdown Menu */}
               {show && (
-                <div className="bg-white w-[200px] rounded-md p-4 top-[100px]">
+                <div className="absolute right-5 bg-white w-[200px] rounded-md p-4 top-[100px] z-10">
                   <h3 className="text-lg font-bold text-purple-600">
                     Mr. Kills
                   </h3>
-                  <h3 className="text-gray-500 border-b-[2px] border-b-gray-300">
+                  <h3 className="text-gray-500 text-sm border-b-[2px] border-b-gray-300">
                     Front-end Developer
                   </h3>
-                  <ul className="">
+                  <ul className="flex flex-col text-gray-700">
                     <DropDownItem image={BiUser} text="My Profile" />
                     <DropDownItem image={BiUser} text="Inbox" />
                     <DropDownItem image={BiUser} text="Settings" />
