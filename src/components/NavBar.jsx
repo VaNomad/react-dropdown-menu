@@ -7,39 +7,44 @@ export default function NavBar() {
   const [show, toggleShow] = useState(false);
 
   return (
-    <nav className="flex justify-between my-5">
+    <nav className="flex flex-col my-5">
       {/* logo */}
-      <div className="flex">
-        <div>
-          <TbMushroom />
+      <div className="flex justify-between mb-6">
+        <div className="flex">
+          <div>
+            <TbMushroom />
+          </div>
+          <h4 className="text-[16px] lowercase tracking-tight font-thin">
+            cogumelo
+            <span className="text-[18px] uppercase tracking-wider font-normal">
+              TRINDADE
+            </span>{" "}
+          </h4>
         </div>
-        <h4 className="text-[16px] lowercase tracking-tight font-thin">
-          cogumelo
-          <span className="text-[18px] uppercase tracking-wider font-normal">
-            TRINDADE
-          </span>{" "}
-        </h4>
+        {/* user-icon */}
+        <div
+          className="flex justify-end cursor-pointer focus:bg-teal-600"
+          onClick={() => toggleShow(!show)}
+        >
+          <BiUser />
+        </div>
       </div>
-      <ul>
-        <li>
-          <a href="/prices">Prices</a>
-        </li>
-        <li>
-          <a href="/deliveries">Deliveries</a>
-        </li>
-        <li>
-          <a href="/about">About</a>
-        </li>
-        <li>
-          <a href="/contact">Contact</a>
-        </li>
-      </ul>
-      {/* user-icon */}
-      <div
-        className="flex justify-end cursor-pointer focus:bg-teal-600"
-        onClick={() => toggleShow(!show)}
-      >
-        <BiUser />
+
+      <div>
+        <ul className="flex justify-center text-sm font-thin gap-6">
+          <li>
+            <a href="/prices">Prices</a>
+          </li>
+          <li>
+            <a href="/deliveries">Deliveries</a>
+          </li>
+          <li>
+            <a href="/about">About</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+        </ul>
       </div>
 
       {/* Dropdown Menu */}

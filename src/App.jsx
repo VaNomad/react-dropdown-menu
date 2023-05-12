@@ -1,11 +1,8 @@
-import React, {useState} from "react";
 import TestApp from "./components/TestApp";
-import { Route, Routes, Link } from "react-router-dom";
 import Spinner from "./components/Spinner";
 import NavBar from "./components/NavBar";
 
 function App() {
-  const [show, toggleShow] = useState(false);
 
   return (
     <div className="bg-[#130114] h-screen">
@@ -25,10 +22,10 @@ function App() {
             <NavBar />
 
             {/* Routes */ }
-            <Routes>
+            {/* <Routes>
               <Route path="/" element={<}
                 
-            </Routes>
+            </Routes> */}
 
             <div>
               <p className="flex justify-center my-5">Mushrooms</p>
