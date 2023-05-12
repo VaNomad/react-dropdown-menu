@@ -1,6 +1,13 @@
 import TestApp from "./components/TestApp";
 import Spinner from "./components/Spinner";
 import NavBar from "./components/NavBar";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Delivery from "./pages/Delivery";
+import Prices from "./pages/Prices";
+
 
 function App() {
 
@@ -22,10 +29,15 @@ function App() {
             <NavBar />
 
             {/* Routes */ }
-            {/* <Routes>
-              <Route path="/" element={<}
-                
-            </Routes> */}
+            <div className="">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/delivery" element={<Delivery />} />
+                <Route path="/prices" element={<Prices />} />
+              </Routes>
+            </div>
 
             <div>
               <p className="flex justify-center my-5">Mushrooms</p>
