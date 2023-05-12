@@ -1,9 +1,8 @@
 import React, {useState} from "react";
-import { BiUser } from "react-icons/bi";
-import { TbMushroom } from "react-icons/tb";
-import DropDownItem from "./components/DropDownItem";
 import TestApp from "./components/TestApp";
-import { Triangle } from "react-loader-spinner";
+import { Route, Routes, Link } from "react-router-dom";
+import Spinner from "./components/Spinner";
+import NavBar from "./components/NavBar";
 
 function App() {
   const [show, toggleShow] = useState(false);
@@ -11,11 +10,7 @@ function App() {
   return (
     <div className="bg-[#130114] h-screen">
       {/* Spinner */}
-      <div className="relative hidden">
-        <div className="z-20 absolute h-screen top-0 right-0 bottom-0 left-0 grid place-items-center">
-          <Triangle height={200} width={200} color="#a34af4" visible={true} />
-        </div>
-      </div>
+      <Spinner />
 
       {/* Container */}
       <div className="flex flex-col p-6">
@@ -27,48 +22,14 @@ function App() {
           <div className="w-full flex flex-col px-2">
 
             {/* NavBar */}
-            <div className="flex justify-between my-5">
-              {/* logo */}
-              <div className="flex">
-                <div>
-                  <TbMushroom />
-                </div>
-                <h4 className="text-[16px] lowercase tracking-tight font-thin">
-                  cogumelo
-                  <span className="text-[18px] uppercase tracking-wider font-normal">
-                    TRINDADE
-                  </span>{" "}
-                </h4>
-              </div>
+            <NavBar />
 
-              {/* user-icon */}
-              <div
-                className="flex justify-end cursor-pointer focus:bg-teal-600"
-                onClick={() => toggleShow(!show)}
-              >
-                <BiUser />
-              </div>
+            {/* Routes */ }
+            <Routes>
+              <Route path="/" element={<}
+                
+            </Routes>
 
-              {/* Dropdown Menu */}
-              {show && (
-                <div className="absolute right-5 bg-white w-[200px] rounded-md p-4 top-[100px] z-10">
-                  <h3 className="text-lg font-bold text-purple-600">
-                    Mr. Kills
-                  </h3>
-                  <h3 className="text-gray-500 text-sm border-b-[2px] border-b-gray-300">
-                    Front-end Developer
-                  </h3>
-                  <ul className="flex flex-col text-gray-700">
-                    <DropDownItem image={BiUser} text="My Profile" />
-                    <DropDownItem image={BiUser} text="Inbox" />
-                    <DropDownItem image={BiUser} text="Settings" />
-                    <DropDownItem image={BiUser} text="Edit Profile" />
-                    <DropDownItem image={BiUser} text="Help" />
-                    <DropDownItem image={BiUser} text="Logout" />
-                  </ul>
-                </div>
-              )}
-            </div>
             <div>
               <p className="flex justify-center my-5">Mushrooms</p>
             </div>
