@@ -39,9 +39,6 @@ function App() {
               </Routes>
             </div>
 
-            <div>
-              <p className="flex justify-center my-5">Mushrooms</p>
-            </div>
           </div>
         </div>
 
@@ -50,26 +47,7 @@ function App() {
           <TestApp />
         </div>
 
-        {/* Cards */}
-        <div className="flex flex-wrap justify-center">
-          <div className="card-zoom">
-            <div className="card-zoom-image bg-whiteButton"></div>
-            <h1 className="card-zoom-text mb-[80px]">WHITE</h1>
-            <h1 className="card-zoom-text mt-[70px]">BUTTONS</h1>
-          </div>
-          <div className="card-zoom">
-            <div className="card-zoom-image bg-crimini"></div>
-            <h1 className="card-zoom-text">CRIMINI</h1>
-          </div>
-          <div className="card-zoom">
-            <div className="card-zoom-image bg-shiitake"></div>
-            <h1 className="card-zoom-text">SHIITAKE</h1>
-          </div>
-          <div className="card-zoom">
-            <div className="card-zoom-image bg-enoki scale-[135%]"></div>
-            <h1 className="card-zoom-text">ENOKI</h1>
-          </div>
-        </div>
+        
 
       </div>
 

@@ -3,10 +3,11 @@
 export default function Home() {
   return (
     <div className="bg-[#130114] h-screen">
-
       {/* Container */}
       <div className="flex flex-col p-6">
-
+        <div>
+          <p className="flex justify-center my-5">Mushrooms</p>
+        </div>
         {/* Cards */}
         <div className="flex flex-wrap justify-center">
           <div className="card-zoom">

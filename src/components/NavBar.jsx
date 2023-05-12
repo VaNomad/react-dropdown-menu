@@ -1,11 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import DropDownItem from "./DropDownItem";
 import { useState } from "react";
 import { BiUser } from "react-icons/bi";
 import { TbMushroom } from "react-icons/tb";
 
-export default function NavBar() {
+export default function NavBar(to) {
   const [show, toggleShow] = useState(false);
+  const resolvedPath = useResolvedPath(to);
+  const isActive = useMatch({path: resolvedPath.pathname, end: true})
 
   return (
     <nav className="flex flex-col my-5">
@@ -37,7 +39,7 @@ export default function NavBar() {
             <Link to="/prices">Prices</Link>
           </li>
           <li>
-            <Link to="/deliveries">Deliveries</Link>
+            <Link to="/delivery">Delivery</Link>
           </li>
           <li>
             <Link to="/about">About</Link>

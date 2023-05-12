@@ -1,7 +1,7 @@
 export default function Prices() {
   return (
     <div>
-      <h1>Prices</h1>
+      <h1 className="flex justify-center my-5">Prices</h1>
     </div>
   );
 }
