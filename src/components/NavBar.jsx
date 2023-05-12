@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import DropDownItem from "./DropDownItem";
 import { useState } from "react";
 import { BiUser } from "react-icons/bi";
@@ -10,7 +11,7 @@ export default function NavBar() {
     <nav className="flex flex-col my-5">
       {/* logo */}
       <div className="flex justify-between mb-6">
-        <div className="flex">
+        <Link to="/" className="flex">
           <div>
             <TbMushroom />
           </div>
@@ -20,7 +21,7 @@ export default function NavBar() {
               TRINDADE
             </span>{" "}
           </h4>
-        </div>
+        </Link>
         {/* user-icon */}
         <div
           className="flex justify-end cursor-pointer focus:bg-teal-600"
@@ -33,16 +34,16 @@ export default function NavBar() {
       <div>
         <ul className="flex justify-center text-sm font-thin gap-6">
           <li>
-            <a href="/prices">Prices</a>
+            <Link to="/prices">Prices</Link>
           </li>
           <li>
-            <a href="/deliveries">Deliveries</a>
+            <Link to="/deliveries">Deliveries</Link>
           </li>
           <li>
-            <a href="/about">About</a>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <a href="/contact">Contact</a>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
       </div>
