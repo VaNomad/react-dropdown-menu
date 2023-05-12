@@ -10,15 +10,23 @@ function App() {
 
   return (
     <div className="bg-[#130114] h-screen">
-      <div className="relative">
+      {/* Spinner */}
+      <div className="relative hidden">
         <div className="z-20 absolute h-screen top-0 right-0 bottom-0 left-0 grid place-items-center">
           <Triangle height={200} width={200} color="#a34af4" visible={true} />
         </div>
       </div>
+
+      {/* Container */}
       <div className="flex flex-col p-6">
+
+        {/* Header Container */}
         <div className="text-white text-4xl font-bold uppercase tracking-widest ">
+
+          {/* Header */}
           <div className="w-full flex flex-col px-2">
-            {/* header-nav */}
+
+            {/* NavBar */}
             <div className="flex justify-between my-5">
               {/* logo */}
               <div className="flex">
@@ -32,6 +40,7 @@ function App() {
                   </span>{" "}
                 </h4>
               </div>
+
               {/* user-icon */}
               <div
                 className="flex justify-end cursor-pointer focus:bg-teal-600"
@@ -39,6 +48,7 @@ function App() {
               >
                 <BiUser />
               </div>
+
               {/* Dropdown Menu */}
               {show && (
                 <div className="absolute right-5 bg-white w-[200px] rounded-md p-4 top-[100px] z-10">
@@ -64,9 +74,13 @@ function App() {
             </div>
           </div>
         </div>
+
+        {/* Test Menu */}
         <div>
           <TestApp />
         </div>
+
+        {/* Cards */}
         <div className="flex flex-wrap justify-center">
           <div className="card-zoom">
             <div className="card-zoom-image bg-whiteButton"></div>
@@ -86,7 +100,9 @@ function App() {
             <h1 className="card-zoom-text">ENOKI</h1>
           </div>
         </div>
+
       </div>
+
     </div>
   );
 }
