@@ -2,12 +2,19 @@ import React, {useState} from "react";
 import { BiUser } from "react-icons/bi";
 import { TbMushroom } from "react-icons/tb";
 import DropDownItem from "./components/DropDownItem";
+import TestApp from "./components/TestApp";
+import { Triangle } from "react-loader-spinner";
 
 function App() {
   const [show, toggleShow] = useState(false);
 
   return (
     <div className="bg-[#130114] h-screen">
+      <div className="relative">
+        <div className="z-20 absolute h-screen top-0 right-0 bottom-0 left-0 grid place-items-center">
+          <Triangle height={200} width={200} color="#a34af4" visible={true} />
+        </div>
+      </div>
       <div className="flex flex-col p-6">
         <div className="text-white text-4xl font-bold uppercase tracking-widest ">
           <div className="w-full flex flex-col px-2">
@@ -56,6 +63,9 @@ function App() {
               <p className="flex justify-center my-5">Mushrooms</p>
             </div>
           </div>
+        </div>
+        <div>
+          <TestApp />
         </div>
         <div className="flex flex-wrap justify-center">
           <div className="card-zoom">
