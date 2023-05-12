@@ -16,6 +16,28 @@ export default {
           "url('https://images.unsplash.com/photo-1603208226824-8b1f8537f57f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTQzfHx2dyUyMGJlZXRsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=700&q=60')",
         myAvatar: "url('./src/assets/CIMG0065.jpg')",
       },
+      screens: {
+        xxs: "320px",
+        // => @media (min-width: 320px) { ... }
+
+        xs: "480px",
+        // => @media (min-width: 480px) { ... }
+
+        sm: "640px",
+        // => @media (min-width: 640px) { ... }
+
+        md: "768px",
+        // => @media (min-width: 768px) { ... }
+
+        lg: "1024px",
+        // => @media (min-width: 1024px) { ... }
+
+        xl: "1280px",
+        // => @media (min-width: 1280px) { ... }
+
+        "2xl": "1536px",
+        // => @media (min-width: 1536px) { ... }
+      },
     },
   },
   plugins: [],

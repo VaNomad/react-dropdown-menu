@@ -6,20 +6,18 @@ import { TbMushroom } from "react-icons/tb";
 
 export default function NavBar() {
   const [show, toggleShow] = useState(false);
-  // const resolvedPath = useResolvedPath(to);
-  // const isActive = useMatch({path: resolvedPath.pathname, end: true})
 
   return (
     <>
       <nav className="flex flex-col mb-5 text-white">
         {/* logo */}
-        <div className="flex justify-between mb-6">
-          <Link to={"/"} className="flex">
-            <div>
-              <TbMushroom />
+        <div className="flex justify-between mb-6 p-6 items-center ">
+          <Link to={"/"} className="flex items-center">
+            <div className="p-2">
+              <TbMushroom size={25} />
             </div>
             <h4 className="text-[16px] lowercase tracking-tight font-thin">
-              cogumelo
+              cogumelos
               <span className="text-[18px] uppercase tracking-wider font-normal">
                 TRINDADE
               </span>{" "}
@@ -30,7 +28,7 @@ export default function NavBar() {
             className="flex justify-end cursor-pointer focus:bg-teal-600"
             onClick={() => toggleShow(!show)}
           >
-            <BiUser />
+            <BiUser size={25}/>
           </div>
         </div>
 
