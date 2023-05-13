@@ -6,7 +6,9 @@ export default function Home() {
       {/* Container */}
       <div className="flex flex-col p-6">
         <div>
-          <p className="flex justify-center my-5">Mushrooms</p>
+          <p className="flex justify-center my-5 text-white text-4xl mt-[60px]">
+            Mushrooms
+          </p>
         </div>
         {/* Cards */}
         <div className="flex flex-wrap justify-center">
