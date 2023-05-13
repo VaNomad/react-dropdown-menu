@@ -34,3 +34,16 @@
 .avatar-image {
   @apply absolute w-full h-full transition-all duration-300 ease-in-out transform bg-center bg-cover;
 }
+
+/* NavBar ——————————————————————————————————————————————————————————— */
+.active {
+  flex: auto;
+  background-color: rgb(200, 149, 248);
+  color: black;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  border-radius:4px;
+  transition: all ease;
+  transition-duration: .2s;
+}
