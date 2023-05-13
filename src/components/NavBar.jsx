@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import DropDownItem from "./DropDownItem";
 import { useState } from "react";
 import { BiUser } from "react-icons/bi";
@@ -35,16 +35,16 @@ export default function NavBar() {
         <div>
           <ul className="flex justify-center text-sm font-thin gap-6">
             <li>
-              <Link to={"/prices"}>Prices</Link>
+              <NavLink to="/prices" className={({isActive}) => isActive ? "active" : ""} >Prices</NavLink>
             </li>
             <li>
-              <Link to={"/delivery"}>Delivery</Link>
+              <NavLink to="/delivery" className={({isActive}) => isActive ? "active" : ""} >Delivery</NavLink>
             </li>
             <li>
-              <Link to={"/about"}>About</Link>
+              <NavLink to="/about" className={({isActive}) => isActive ? "active" : ""} >About</NavLink>
             </li>
             <li>
-              <Link to={"/contact"}>Contact</Link>
+              <NavLink to="/contact" className={({isActive}) => isActive ? "active" : ""} >Contact</NavLink>
             </li>
           </ul>
         </div>
